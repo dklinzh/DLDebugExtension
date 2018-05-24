@@ -17,7 +17,8 @@ DLDebugExtension is available through [CocoaPods](https://cocoapods.org). To ins
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'DLDebugExtension'
+#Only be installed in `Debug` build configuration
+pod 'DLDebugExtension', :configuration => 'Debug', :git => 'https://github.com/dklinzh/DLDebugExtension.git'
 ```
 
 ## Author

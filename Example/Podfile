@@ -1,7 +1,9 @@
+platform :ios, '8.0'
+
 use_frameworks!
 
 target 'DLDebugExtension_Example' do
-  pod 'DLDebugExtension', :path => '../'
+  pod 'DLDebugExtension', :configuration => 'Debug', :path => '../'
 
   target 'DLDebugExtension_Tests' do
     inherit! :search_paths
