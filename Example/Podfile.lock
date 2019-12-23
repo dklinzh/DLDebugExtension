@@ -1,29 +1,44 @@
 PODS:
-  - DLDebugExtension (0.1.0):
-    - DLDebugExtension/Log (= 0.1.0)
-  - DLDebugExtension/Log (0.1.0)
-  - Nimble (7.0.3)
-  - Quick (1.2.0)
+  - CocoaDebug (1.0.2)
+  - DLDebugExtension (0.2.0):
+    - DLDebugExtension/Debug (= 0.2.0)
+    - DLDebugExtension/Diagnose (= 0.2.0)
+    - DLDebugExtension/Log (= 0.2.0)
+  - DLDebugExtension/Debug (0.2.0):
+    - CocoaDebug (~> 1.0)
+    - FLEX (~> 3.0)
+  - DLDebugExtension/Diagnose (0.2.0)
+  - DLDebugExtension/Log (0.2.0)
+  - FLEX (3.0.0)
+  - Nimble (8.0.4)
+  - Quick (2.2.0)
 
 DEPENDENCIES:
+  - CocoaDebug (from `../../CocoaDebug`)
   - DLDebugExtension (from `../`)
-  - Nimble (~> 7.0.2)
-  - Quick (~> 1.2.0)
+  - FLEX (~> 3.0)
+  - Nimble
+  - Quick
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
+    - FLEX
     - Nimble
     - Quick
 
 EXTERNAL SOURCES:
+  CocoaDebug:
+    :path: "../../CocoaDebug"
   DLDebugExtension:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DLDebugExtension: 0a76c9361090894c0325fbf1903215cccbaee891
-  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
-  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  CocoaDebug: be736e3a5c51dc98c03640ba0e972322ad83f99b
+  DLDebugExtension: 8b0982e606c1a3a5988aa7ed875797eb9e9a4ddf
+  FLEX: d66c759bce0f6ebbbf472c742380874d846f2883
+  Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
+  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
 
-PODFILE CHECKSUM: a9446e046b468d884baa87b18a0bfeb26d3b13eb
+PODFILE CHECKSUM: b5e5d4c28666e75b49cea025615d83fc873fdb1f
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.8.4
