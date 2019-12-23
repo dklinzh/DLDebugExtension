@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'DLDebugExtension'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'Debug tools and extension frameworks for iOS development.'
 
   s.description      = <<-DESC
@@ -13,11 +13,24 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/dklinzh/DLDebugExtension.git', :tag => s.version.to_s }
 
   s.requires_arc = true
+  s.swift_version = '5.0'
   s.ios.deployment_target = '8.0'
   
-  s.subspec 'Log' do |log|
-    log.private_header_files = 'DLDebugExtension/Classes/Log/_*.h'
-    log.source_files = 'DLDebugExtension/Classes/Log/*'
+  s.subspec 'Log' do |ss|
+    ss.private_header_files = 'DLDebugExtension/Classes/Log/_*.h'
+    ss.source_files = 'DLDebugExtension/Classes/Log/*'
+  end
+
+  s.subspec 'Diagnose' do |ss|
+    ss.private_header_files = 'DLDebugExtension/Classes/Diagnose/_*.h'
+    ss.source_files = 'DLDebugExtension/Classes/Diagnose/*'
+  end
+
+  s.subspec 'Debug' do |ss|
+    ss.dependency 'CocoaDebug', '~> 1.0'
+    ss.dependency 'FLEX', '~> 3.0'
+    ss.private_header_files = 'DLDebugExtension/Classes/Debug/_*.h'
+    ss.source_files = 'DLDebugExtension/Classes/Debug/*'
   end
 
 end
