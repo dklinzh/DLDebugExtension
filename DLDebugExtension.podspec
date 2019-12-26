@@ -26,6 +26,11 @@ Pod::Spec.new do |s|
     ss.source_files = 'DLDebugExtension/Classes/Diagnose/*'
   end
 
+  s.subspec 'Config' do |ss|
+    ss.private_header_files = 'DLDebugExtension/Classes/Config/_*.h'
+    ss.source_files = 'DLDebugExtension/Classes/Config/*'
+  end
+
   s.subspec 'Debug' do |ss|
     ss.dependency 'CocoaDebug', '~> 1.0'
     ss.dependency 'FLEX', '~> 3.0'
