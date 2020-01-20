@@ -40,6 +40,8 @@ struct _CocoaDebug {
                       emailCcRecipients: [String]? = nil,
                       themeColor: UIColor? = nil,
                       shakeToHide: Bool = true) {
+        CocoaDebugSettings.shared.disableLogMonitoring = true // FIX: NSLog() incomplete output 
+
         CocoaDebug.serverURL = mainHost
         CocoaDebug.ignoredURLs = ignoredHosts
         CocoaDebug.onlyURLs = onlyFocusedHosts

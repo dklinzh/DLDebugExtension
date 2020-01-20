@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'DLDebugExtension'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'Debug tools and extension frameworks for iOS development.'
 
   s.description      = <<-DESC
